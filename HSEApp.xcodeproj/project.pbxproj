@@ -7,27 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED5488971E3402100042C462 /* SettingsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5488961E3402100042C462 /* SettingsButton.m */; };
+		ED54889D1E3681E60042C462 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED54889C1E3681E60042C462 /* PickerViewController.m */; };
 		ED585C4F1E3232AD008998D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585C4E1E3232AD008998D3 /* main.m */; };
 		ED585C521E3232AD008998D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585C511E3232AD008998D3 /* AppDelegate.m */; };
-		ED585C551E3232AD008998D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585C541E3232AD008998D3 /* ViewController.m */; };
 		ED585C581E3232AD008998D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED585C561E3232AD008998D3 /* Main.storyboard */; };
 		ED585C5B1E3232AD008998D3 /* HSEApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED585C591E3232AD008998D3 /* HSEApp.xcdatamodeld */; };
 		ED585C5D1E3232AD008998D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED585C5C1E3232AD008998D3 /* Assets.xcassets */; };
 		ED585C601E3232AD008998D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED585C5E1E3232AD008998D3 /* LaunchScreen.storyboard */; };
+		ED585C971E3244BB008998D3 /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585C961E3244BB008998D3 /* AuthViewController.m */; };
+		ED585CB91E32479C008998D3 /* SF-UI-Text-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CA41E32479C008998D3 /* SF-UI-Text-Bold.ttf */; };
+		ED585CBA1E32479C008998D3 /* SF-UI-Text-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CA51E32479C008998D3 /* SF-UI-Text-BoldItalic.ttf */; };
+		ED585CBB1E32479C008998D3 /* SF-UI-Text-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CA61E32479C008998D3 /* SF-UI-Text-Heavy.ttf */; };
+		ED585CBC1E32479C008998D3 /* SF-UI-Text-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CA71E32479C008998D3 /* SF-UI-Text-HeavyItalic.ttf */; };
+		ED585CBD1E32479C008998D3 /* SF-UI-Text-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CA81E32479C008998D3 /* SF-UI-Text-Italic.ttf */; };
+		ED585CBE1E32479C008998D3 /* SF-UI-Text-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CA91E32479C008998D3 /* SF-UI-Text-Light.ttf */; };
+		ED585CBF1E32479C008998D3 /* SF-UI-Text-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CAA1E32479C008998D3 /* SF-UI-Text-LightItalic.ttf */; };
+		ED585CC01E32479C008998D3 /* SF-UI-Text-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CAB1E32479C008998D3 /* SF-UI-Text-Medium.ttf */; };
+		ED585CC11E32479C008998D3 /* SF-UI-Text-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CAC1E32479C008998D3 /* SF-UI-Text-MediumItalic.ttf */; };
+		ED585CC21E32479C008998D3 /* SF-UI-Text-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CAD1E32479C008998D3 /* SF-UI-Text-Regular.ttf */; };
+		ED585CC31E32479C008998D3 /* SF-UI-Text-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CAE1E32479C008998D3 /* SF-UI-Text-Semibold.ttf */; };
+		ED585CC41E32479C008998D3 /* SF-UI-Text-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CAF1E32479C008998D3 /* SF-UI-Text-SemiboldItalic.ttf */; };
+		ED585CC71E325011008998D3 /* SignInButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CC61E325011008998D3 /* SignInButton.m */; };
+		ED585CCD1E32570C008998D3 /* SignInField.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CCC1E32570C008998D3 /* SignInField.m */; };
+		ED585CD21E326D9C008998D3 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CD11E326D9C008998D3 /* TabBarController.m */; };
+		ED585CDB1E3270D8008998D3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CDA1E3270D8008998D3 /* SettingsViewController.m */; };
+		ED585CDE1E3270E4008998D3 /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CDD1E3270E4008998D3 /* NotificationsViewController.m */; };
+		ED585CE11E3270F0008998D3 /* TimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CE01E3270F0008998D3 /* TimeTableViewController.m */; };
+		ED585CE51E32865D008998D3 /* WeekSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CE41E32865D008998D3 /* WeekSwitchButton.m */; };
+		ED585CE91E328927008998D3 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CE81E328927008998D3 /* Lesson.m */; };
+		ED585CEC1E328A6D008998D3 /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CEB1E328A6D008998D3 /* Day.m */; };
+		ED585CEF1E328ABD008998D3 /* LessonsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CEE1E328ABD008998D3 /* LessonsManager.m */; };
+		ED585CF21E328FA1008998D3 /* Week.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CF11E328FA1008998D3 /* Week.m */; };
+		ED585CF61E32ABD3008998D3 /* TimeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CF41E32ABD3008998D3 /* TimeTableCell.m */; };
+		ED585CF71E32ABD3008998D3 /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED585CF51E32ABD3008998D3 /* TimeTableCell.xib */; };
+		ED585CFB1E32BC59008998D3 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CFA1E32BC59008998D3 /* Notification.m */; };
+		ED585CFE1E32BD8A008998D3 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585CFD1E32BD8A008998D3 /* NotificationManager.m */; };
+		ED585D011E32C32E008998D3 /* NotificationSection.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D001E32C32E008998D3 /* NotificationSection.m */; };
+		ED585D041E33316C008998D3 /* NotificationDescriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D031E33316C008998D3 /* NotificationDescriptionController.m */; };
+		ED585D071E33910C008998D3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D061E33910C008998D3 /* User.m */; };
+		ED585D0A1E3391D5008998D3 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D091E3391D5008998D3 /* UserManager.m */; };
+		ED585D0D1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D0C1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED5488951E3402100042C462 /* SettingsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsButton.h; sourceTree = "<group>"; };
+		ED5488961E3402100042C462 /* SettingsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsButton.m; sourceTree = "<group>"; };
+		ED54889B1E3681E60042C462 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
+		ED54889C1E3681E60042C462 /* PickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerViewController.m; sourceTree = "<group>"; };
 		ED585C4A1E3232AD008998D3 /* HSEApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSEApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED585C4E1E3232AD008998D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED585C501E3232AD008998D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ED585C511E3232AD008998D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ED585C531E3232AD008998D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ED585C541E3232AD008998D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ED585C571E3232AD008998D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED585C5A1E3232AD008998D3 /* HSEApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HSEApp.xcdatamodel; sourceTree = "<group>"; };
 		ED585C5C1E3232AD008998D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED585C5F1E3232AD008998D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED585C611E3232AD008998D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED585C951E3244BB008998D3 /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		ED585C961E3244BB008998D3 /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		ED585CA41E32479C008998D3 /* SF-UI-Text-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Bold.ttf"; path = "Fonts/SF-UI-Text-Bold.ttf"; sourceTree = "<group>"; };
+		ED585CA51E32479C008998D3 /* SF-UI-Text-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-BoldItalic.ttf"; path = "Fonts/SF-UI-Text-BoldItalic.ttf"; sourceTree = "<group>"; };
+		ED585CA61E32479C008998D3 /* SF-UI-Text-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Heavy.ttf"; path = "Fonts/SF-UI-Text-Heavy.ttf"; sourceTree = "<group>"; };
+		ED585CA71E32479C008998D3 /* SF-UI-Text-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-HeavyItalic.ttf"; path = "Fonts/SF-UI-Text-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		ED585CA81E32479C008998D3 /* SF-UI-Text-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Italic.ttf"; path = "Fonts/SF-UI-Text-Italic.ttf"; sourceTree = "<group>"; };
+		ED585CA91E32479C008998D3 /* SF-UI-Text-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Light.ttf"; path = "Fonts/SF-UI-Text-Light.ttf"; sourceTree = "<group>"; };
+		ED585CAA1E32479C008998D3 /* SF-UI-Text-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-LightItalic.ttf"; path = "Fonts/SF-UI-Text-LightItalic.ttf"; sourceTree = "<group>"; };
+		ED585CAB1E32479C008998D3 /* SF-UI-Text-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Medium.ttf"; path = "Fonts/SF-UI-Text-Medium.ttf"; sourceTree = "<group>"; };
+		ED585CAC1E32479C008998D3 /* SF-UI-Text-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-MediumItalic.ttf"; path = "Fonts/SF-UI-Text-MediumItalic.ttf"; sourceTree = "<group>"; };
+		ED585CAD1E32479C008998D3 /* SF-UI-Text-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Regular.ttf"; path = "Fonts/SF-UI-Text-Regular.ttf"; sourceTree = "<group>"; };
+		ED585CAE1E32479C008998D3 /* SF-UI-Text-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Semibold.ttf"; path = "Fonts/SF-UI-Text-Semibold.ttf"; sourceTree = "<group>"; };
+		ED585CAF1E32479C008998D3 /* SF-UI-Text-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-SemiboldItalic.ttf"; path = "Fonts/SF-UI-Text-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		ED585CC51E325011008998D3 /* SignInButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInButton.h; sourceTree = "<group>"; };
+		ED585CC61E325011008998D3 /* SignInButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInButton.m; sourceTree = "<group>"; };
+		ED585CCB1E32570C008998D3 /* SignInField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInField.h; sourceTree = "<group>"; };
+		ED585CCC1E32570C008998D3 /* SignInField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInField.m; sourceTree = "<group>"; };
+		ED585CD01E326D9C008998D3 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		ED585CD11E326D9C008998D3 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		ED585CD91E3270D8008998D3 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		ED585CDA1E3270D8008998D3 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		ED585CDC1E3270E4008998D3 /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		ED585CDD1E3270E4008998D3 /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
+		ED585CDF1E3270F0008998D3 /* TimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableViewController.h; sourceTree = "<group>"; };
+		ED585CE01E3270F0008998D3 /* TimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewController.m; sourceTree = "<group>"; };
+		ED585CE31E32865D008998D3 /* WeekSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeekSwitchButton.h; sourceTree = "<group>"; };
+		ED585CE41E32865D008998D3 /* WeekSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeekSwitchButton.m; sourceTree = "<group>"; };
+		ED585CE71E328927008998D3 /* Lesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lesson.h; sourceTree = "<group>"; };
+		ED585CE81E328927008998D3 /* Lesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lesson.m; sourceTree = "<group>"; };
+		ED585CEA1E328A6D008998D3 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		ED585CEB1E328A6D008998D3 /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
+		ED585CED1E328ABD008998D3 /* LessonsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonsManager.h; sourceTree = "<group>"; };
+		ED585CEE1E328ABD008998D3 /* LessonsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonsManager.m; sourceTree = "<group>"; };
+		ED585CF01E328FA1008998D3 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Week.h; sourceTree = "<group>"; };
+		ED585CF11E328FA1008998D3 /* Week.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Week.m; sourceTree = "<group>"; };
+		ED585CF31E32ABD3008998D3 /* TimeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableCell.h; sourceTree = "<group>"; };
+		ED585CF41E32ABD3008998D3 /* TimeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableCell.m; sourceTree = "<group>"; };
+		ED585CF51E32ABD3008998D3 /* TimeTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
+		ED585CF91E32BC59008998D3 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
+		ED585CFA1E32BC59008998D3 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
+		ED585CFC1E32BD8A008998D3 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
+		ED585CFD1E32BD8A008998D3 /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
+		ED585CFF1E32C32E008998D3 /* NotificationSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationSection.h; sourceTree = "<group>"; };
+		ED585D001E32C32E008998D3 /* NotificationSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationSection.m; sourceTree = "<group>"; };
+		ED585D021E33316C008998D3 /* NotificationDescriptionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationDescriptionController.h; sourceTree = "<group>"; };
+		ED585D031E33316C008998D3 /* NotificationDescriptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationDescriptionController.m; sourceTree = "<group>"; };
+		ED585D051E33910C008998D3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		ED585D061E33910C008998D3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		ED585D081E3391D5008998D3 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		ED585D091E3391D5008998D3 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		ED585D0B1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+ModifiedDefaults.h"; sourceTree = "<group>"; };
+		ED585D0C1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+ModifiedDefaults.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED5488941E3401F60042C462 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED5488951E3402100042C462 /* SettingsButton.h */,
+				ED5488961E3402100042C462 /* SettingsButton.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		ED585C411E3232AD008998D3 = {
 			isa = PBXGroup;
 			children = (
@@ -60,16 +158,18 @@
 		ED585C4C1E3232AD008998D3 /* HSEApp */ = {
 			isa = PBXGroup;
 			children = (
-				ED585C501E3232AD008998D3 /* AppDelegate.h */,
-				ED585C511E3232AD008998D3 /* AppDelegate.m */,
-				ED585C531E3232AD008998D3 /* ViewController.h */,
-				ED585C541E3232AD008998D3 /* ViewController.m */,
-				ED585C561E3232AD008998D3 /* Main.storyboard */,
+				ED585CD51E3270B0008998D3 /* SettingsController */,
+				ED585CD41E32709A008998D3 /* NotificationsController */,
+				ED585CD31E32708C008998D3 /* TimeTableController */,
+				ED585CCE1E326D7A008998D3 /* TabBarController */,
+				ED585C981E3244D1008998D3 /* Storyboard */,
+				ED585C911E32447D008998D3 /* Auth */,
+				ED585C991E3244E6008998D3 /* System Files */,
+				ED585C9A1E32472F008998D3 /* Fonts */,
 				ED585C5C1E3232AD008998D3 /* Assets.xcassets */,
-				ED585C5E1E3232AD008998D3 /* LaunchScreen.storyboard */,
-				ED585C611E3232AD008998D3 /* Info.plist */,
-				ED585C591E3232AD008998D3 /* HSEApp.xcdatamodeld */,
 				ED585C4D1E3232AD008998D3 /* Supporting Files */,
+				ED585D0B1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.h */,
+				ED585D0C1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m */,
 			);
 			path = HSEApp;
 			sourceTree = "<group>";
@@ -80,6 +180,202 @@
 				ED585C4E1E3232AD008998D3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED585C911E32447D008998D3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				ED585C941E3244AA008998D3 /* Model */,
+				ED585C931E3244A2008998D3 /* View */,
+				ED585C921E324499008998D3 /* Controller */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		ED585C921E324499008998D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED585C951E3244BB008998D3 /* AuthViewController.h */,
+				ED585C961E3244BB008998D3 /* AuthViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED585C931E3244A2008998D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CC51E325011008998D3 /* SignInButton.h */,
+				ED585CC61E325011008998D3 /* SignInButton.m */,
+				ED585CCB1E32570C008998D3 /* SignInField.h */,
+				ED585CCC1E32570C008998D3 /* SignInField.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ED585C941E3244AA008998D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED585D051E33910C008998D3 /* User.h */,
+				ED585D061E33910C008998D3 /* User.m */,
+				ED585D081E3391D5008998D3 /* UserManager.h */,
+				ED585D091E3391D5008998D3 /* UserManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ED585C981E3244D1008998D3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ED585C561E3232AD008998D3 /* Main.storyboard */,
+				ED585C5E1E3232AD008998D3 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		ED585C991E3244E6008998D3 /* System Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED585C611E3232AD008998D3 /* Info.plist */,
+				ED585C591E3232AD008998D3 /* HSEApp.xcdatamodeld */,
+				ED585C501E3232AD008998D3 /* AppDelegate.h */,
+				ED585C511E3232AD008998D3 /* AppDelegate.m */,
+			);
+			name = "System Files";
+			sourceTree = "<group>";
+		};
+		ED585C9A1E32472F008998D3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CA41E32479C008998D3 /* SF-UI-Text-Bold.ttf */,
+				ED585CA51E32479C008998D3 /* SF-UI-Text-BoldItalic.ttf */,
+				ED585CA61E32479C008998D3 /* SF-UI-Text-Heavy.ttf */,
+				ED585CA71E32479C008998D3 /* SF-UI-Text-HeavyItalic.ttf */,
+				ED585CA81E32479C008998D3 /* SF-UI-Text-Italic.ttf */,
+				ED585CA91E32479C008998D3 /* SF-UI-Text-Light.ttf */,
+				ED585CAA1E32479C008998D3 /* SF-UI-Text-LightItalic.ttf */,
+				ED585CAB1E32479C008998D3 /* SF-UI-Text-Medium.ttf */,
+				ED585CAC1E32479C008998D3 /* SF-UI-Text-MediumItalic.ttf */,
+				ED585CAD1E32479C008998D3 /* SF-UI-Text-Regular.ttf */,
+				ED585CAE1E32479C008998D3 /* SF-UI-Text-Semibold.ttf */,
+				ED585CAF1E32479C008998D3 /* SF-UI-Text-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		ED585CCE1E326D7A008998D3 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CCF1E326D84008998D3 /* Controller */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		ED585CCF1E326D84008998D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CD01E326D9C008998D3 /* TabBarController.h */,
+				ED585CD11E326D9C008998D3 /* TabBarController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED585CD31E32708C008998D3 /* TimeTableController */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CE61E328913008998D3 /* Model */,
+				ED585CE21E328640008998D3 /* View */,
+				ED585CD61E3270B9008998D3 /* Controller */,
+			);
+			name = TimeTableController;
+			sourceTree = "<group>";
+		};
+		ED585CD41E32709A008998D3 /* NotificationsController */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CF81E32BC42008998D3 /* Model */,
+				ED585CD71E3270BF008998D3 /* Controller */,
+			);
+			name = NotificationsController;
+			sourceTree = "<group>";
+		};
+		ED585CD51E3270B0008998D3 /* SettingsController */ = {
+			isa = PBXGroup;
+			children = (
+				ED5488941E3401F60042C462 /* View */,
+				ED585CD81E3270C3008998D3 /* Controller */,
+			);
+			name = SettingsController;
+			sourceTree = "<group>";
+		};
+		ED585CD61E3270B9008998D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CDF1E3270F0008998D3 /* TimeTableViewController.h */,
+				ED585CE01E3270F0008998D3 /* TimeTableViewController.m */,
+				ED585CF31E32ABD3008998D3 /* TimeTableCell.h */,
+				ED585CF41E32ABD3008998D3 /* TimeTableCell.m */,
+				ED585CF51E32ABD3008998D3 /* TimeTableCell.xib */,
+				ED54889B1E3681E60042C462 /* PickerViewController.h */,
+				ED54889C1E3681E60042C462 /* PickerViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED585CD71E3270BF008998D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CDC1E3270E4008998D3 /* NotificationsViewController.h */,
+				ED585CDD1E3270E4008998D3 /* NotificationsViewController.m */,
+				ED585D021E33316C008998D3 /* NotificationDescriptionController.h */,
+				ED585D031E33316C008998D3 /* NotificationDescriptionController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED585CD81E3270C3008998D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CD91E3270D8008998D3 /* SettingsViewController.h */,
+				ED585CDA1E3270D8008998D3 /* SettingsViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED585CE21E328640008998D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CE31E32865D008998D3 /* WeekSwitchButton.h */,
+				ED585CE41E32865D008998D3 /* WeekSwitchButton.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ED585CE61E328913008998D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CE71E328927008998D3 /* Lesson.h */,
+				ED585CE81E328927008998D3 /* Lesson.m */,
+				ED585CEA1E328A6D008998D3 /* Day.h */,
+				ED585CEB1E328A6D008998D3 /* Day.m */,
+				ED585CF01E328FA1008998D3 /* Week.h */,
+				ED585CF11E328FA1008998D3 /* Week.m */,
+				ED585CED1E328ABD008998D3 /* LessonsManager.h */,
+				ED585CEE1E328ABD008998D3 /* LessonsManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ED585CF81E32BC42008998D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED585CF91E32BC59008998D3 /* Notification.h */,
+				ED585CFA1E32BC59008998D3 /* Notification.m */,
+				ED585CFC1E32BD8A008998D3 /* NotificationManager.h */,
+				ED585CFD1E32BD8A008998D3 /* NotificationManager.m */,
+				ED585CFF1E32C32E008998D3 /* NotificationSection.h */,
+				ED585D001E32C32E008998D3 /* NotificationSection.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +437,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED585CBF1E32479C008998D3 /* SF-UI-Text-LightItalic.ttf in Resources */,
+				ED585CC31E32479C008998D3 /* SF-UI-Text-Semibold.ttf in Resources */,
+				ED585CBD1E32479C008998D3 /* SF-UI-Text-Italic.ttf in Resources */,
 				ED585C601E3232AD008998D3 /* LaunchScreen.storyboard in Resources */,
+				ED585CC21E32479C008998D3 /* SF-UI-Text-Regular.ttf in Resources */,
+				ED585CC41E32479C008998D3 /* SF-UI-Text-SemiboldItalic.ttf in Resources */,
+				ED585CBA1E32479C008998D3 /* SF-UI-Text-BoldItalic.ttf in Resources */,
 				ED585C5D1E3232AD008998D3 /* Assets.xcassets in Resources */,
+				ED585CBE1E32479C008998D3 /* SF-UI-Text-Light.ttf in Resources */,
+				ED585CF71E32ABD3008998D3 /* TimeTableCell.xib in Resources */,
+				ED585CC11E32479C008998D3 /* SF-UI-Text-MediumItalic.ttf in Resources */,
+				ED585CC01E32479C008998D3 /* SF-UI-Text-Medium.ttf in Resources */,
 				ED585C581E3232AD008998D3 /* Main.storyboard in Resources */,
+				ED585CBC1E32479C008998D3 /* SF-UI-Text-HeavyItalic.ttf in Resources */,
+				ED585CB91E32479C008998D3 /* SF-UI-Text-Bold.ttf in Resources */,
+				ED585CBB1E32479C008998D3 /* SF-UI-Text-Heavy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,10 +463,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5488971E3402100042C462 /* SettingsButton.m in Sources */,
+				ED585CD21E326D9C008998D3 /* TabBarController.m in Sources */,
+				ED585CF61E32ABD3008998D3 /* TimeTableCell.m in Sources */,
+				ED585D011E32C32E008998D3 /* NotificationSection.m in Sources */,
 				ED585C5B1E3232AD008998D3 /* HSEApp.xcdatamodeld in Sources */,
-				ED585C551E3232AD008998D3 /* ViewController.m in Sources */,
+				ED585D0A1E3391D5008998D3 /* UserManager.m in Sources */,
+				ED585C971E3244BB008998D3 /* AuthViewController.m in Sources */,
+				ED54889D1E3681E60042C462 /* PickerViewController.m in Sources */,
+				ED585D0D1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m in Sources */,
+				ED585CE91E328927008998D3 /* Lesson.m in Sources */,
+				ED585CDB1E3270D8008998D3 /* SettingsViewController.m in Sources */,
+				ED585CFE1E32BD8A008998D3 /* NotificationManager.m in Sources */,
+				ED585D071E33910C008998D3 /* User.m in Sources */,
+				ED585CCD1E32570C008998D3 /* SignInField.m in Sources */,
+				ED585D041E33316C008998D3 /* NotificationDescriptionController.m in Sources */,
 				ED585C521E3232AD008998D3 /* AppDelegate.m in Sources */,
+				ED585CEF1E328ABD008998D3 /* LessonsManager.m in Sources */,
+				ED585CE51E32865D008998D3 /* WeekSwitchButton.m in Sources */,
 				ED585C4F1E3232AD008998D3 /* main.m in Sources */,
+				ED585CFB1E32BC59008998D3 /* Notification.m in Sources */,
+				ED585CF21E328FA1008998D3 /* Week.m in Sources */,
+				ED585CC71E325011008998D3 /* SignInButton.m in Sources */,
+				ED585CE11E3270F0008998D3 /* TimeTableViewController.m in Sources */,
+				ED585CEC1E328A6D008998D3 /* Day.m in Sources */,
+				ED585CDE1E3270E4008998D3 /* NotificationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +609,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AW37662HE7;
 				INFOPLIST_FILE = HSEApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kirillkorolev.HSEApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,6 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AW37662HE7;
 				INFOPLIST_FILE = HSEApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kirillkorolev.HSEApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +648,7 @@
 				ED585C661E3232AD008998D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

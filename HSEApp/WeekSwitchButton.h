@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WeekSwitchButton.h
 //  HSEApp
 //
 //  Created by Kirill Korolev on 20/01/17.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+IB_DESIGNABLE
 
+@interface WeekSwitchButton : UIButton
+
+@property (assign, nonatomic) IBInspectable CGFloat borderRadius;
 
 @end
-
