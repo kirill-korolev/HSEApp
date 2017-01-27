@@ -12,5 +12,7 @@ IB_DESIGNABLE
 
 @interface SettingsButton : UIButton
 
+@property (assign, nonatomic) IBInspectable CGFloat topBorder;
+@property (assign, nonatomic) IBInspectable CGFloat bottomBorder;
 
 @end

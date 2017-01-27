@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
+extern NSString* const TabBarTimeTableLiteral;
+extern NSString* const TabBarNotificationsLiteral;
+extern NSString* const TabBarSettingsLiteral;
+extern NSString* const TabBarOfficeLiteral;
 
+IB_DESIGNABLE
 @interface TabBarController : UITabBarController
 
 @end

@@ -21,9 +21,20 @@
     if(self)
     {
         [self updateProperties];
+        
     }
     
     return self;
+}
+
+-(CGRect)textRectForBounds:(CGRect)bounds
+{
+    return CGRectMake(15.f, 0, bounds.size.width, bounds.size.height);
+}
+
+-(CGRect)editingRectForBounds:(CGRect)bounds
+{
+    return CGRectMake(15.f, 0, bounds.size.width, bounds.size.height);
 }
 
 -(void)setBorderWidth:(CGFloat)borderWidth

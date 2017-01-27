@@ -10,6 +10,7 @@
 #import "User.h"
 #import "NSUserDefaults+ModifiedDefaults.h"
 #import "SettingsButton.h"
+#import "TabBarController.h"
 
 @interface SettingsViewController ()
 
@@ -40,7 +41,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.parentViewController.navigationItem.title = @"Настройки";    
+    self.parentViewController.navigationItem.title = TabBarSettingsLiteral;
 }
 - (IBAction)didTouchExitButton:(id)sender {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"user"];

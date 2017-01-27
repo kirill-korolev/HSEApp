@@ -12,9 +12,9 @@
 
 @synthesize title;
 @synthesize descriptionText;
+@synthesize category;
 
-
--(id)initWithTitle:(NSString *)headerTitle descriptionText:(NSString *)text
+-(id)initWithTitle:(NSString *)headerTitle descriptionText:(NSString *)text category:(Category) group
 {
     self = [super init];
     
@@ -22,6 +22,7 @@
     {
         self.title = headerTitle;
         self.descriptionText = text;
+        self.category = group;
     }
     return self;
 }

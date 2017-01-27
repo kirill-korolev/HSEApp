@@ -50,7 +50,7 @@
 
 -(NSDictionary*)users
 {
-    return @{@"Kirill Korolev":@"kafafyf@gmail.com", @"Karina Kedr":@"karina@gmail.com"};
+    return @{@"админ":@"админ", @"admin":@"admin"};
 }
 
 @end

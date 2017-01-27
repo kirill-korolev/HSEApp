@@ -8,11 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+    ScheduleCategory,
+    DifferentCategory,
+    PaymentCategory
+}Category;
+
 @interface Notification : NSObject
 
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* descriptionText;
+@property (assign, nonatomic) Category category;
 
--(id)initWithTitle:(NSString*)headerTitle descriptionText:(NSString*) text;
+-(id)initWithTitle:(NSString*)headerTitle descriptionText:(NSString*) text category:(Category) group;
 
 @end

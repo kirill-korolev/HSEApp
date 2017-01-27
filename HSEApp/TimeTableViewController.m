@@ -13,6 +13,7 @@
 #import "Lesson.h"
 #import "TimeTableCell.h"
 #import "WeekSwitchButton.h"
+#import "TabBarController.h"
 
 @interface TimeTableViewController () <UITableViewDelegate, UITableViewDataSource>
 {
@@ -75,7 +76,7 @@
 {
     self.parentViewController.navigationItem.leftBarButtonItem = nil;
     self.parentViewController.navigationItem.rightBarButtonItem = datePicker;
-    self.parentViewController.navigationItem.title = @"Расписание";
+    self.parentViewController.navigationItem.title = TabBarTimeTableLiteral;
 }
 
 -(void)didTouchBarButtonItem:(id)sender
@@ -181,17 +182,41 @@
     Day* day = [week.days objectForKey:[daysOfWeek objectAtIndex:section]];
  
     UIView* footerView = [[UIView alloc] init];
+
+    UIView* line = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, footerView.bounds.size.width, 1.f)];
+    line.translatesAutoresizingMaskIntoConstraints = NO;
+    line.backgroundColor = [UIColor colorWithRed:230/255.f green:230/255.f  blue:230/255.f  alpha:1.f];
+    
+    NSLayoutConstraint* lineWidthConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:line attribute:NSLayoutAttributeWidth multiplier:1.f constant:0.0];
+    NSLayoutConstraint* lineBottomConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:line attribute:NSLayoutAttributeTop multiplier:1.f constant:0.0];
+    NSLayoutConstraint* lineHeightConstraint = [NSLayoutConstraint constraintWithItem:line attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:NSConstantValueExpressionType attribute:NSLayoutAttributeHeight multiplier:1.f constant:1.f];
+    
+    [footerView addConstraint:lineWidthConstraint];
+    [footerView addConstraint:lineBottomConstraint];
+    [line addConstraint:lineHeightConstraint];
+    [footerView addSubview:line];
+    
     if(day.lessons.count == 0)
     {
-        footerView.frame = CGRectMake(0, 0, dataTable.frame.size.width, 1.f);
+        footerView.frame = dataTable.bounds;
         [footerView setBackgroundColor:[UIColor colorWithRed:238/255.f green:238/255.f blue:238/255.f alpha:1.f]];
         
-        UILabel* footerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, dataTable.frame.size.width, 46.f)];
+        UILabel* footerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, footerView.bounds.size.width, 51.f)];
         [footerLabel setText:@"Нет занятий"];
+        footerLabel.translatesAutoresizingMaskIntoConstraints = NO;
         footerLabel.font = [UIFont fontWithName:@"SFUIText-Regular" size:14.f];
         footerLabel.textAlignment = NSTextAlignmentCenter;
         [footerLabel setTextColor:[UIColor colorWithRed:128/255.f green:128/255.f blue:128/255.f alpha:1.f]];
+
+        NSLayoutConstraint* labelWidthConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:footerLabel attribute:NSLayoutAttributeWidth multiplier:1.f constant:0.0];
         
+         NSLayoutConstraint* labelCenterXConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:footerLabel attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0.0];
+        
+        NSLayoutConstraint* labelHeightConstraint = [NSLayoutConstraint constraintWithItem:footerLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:NSConstantValueExpressionType attribute:NSLayoutAttributeHeight multiplier:1.f constant:51.f];
+        
+        [footerView addConstraint:labelWidthConstraint];
+        [footerView addConstraint:labelCenterXConstraint];
+        [footerLabel addConstraint:labelHeightConstraint];
         [footerView addSubview:footerLabel];
     }
     
@@ -205,10 +230,10 @@
     
     if(day.lessons.count == 0)
     {
-        return 46.0f;
+        return 51.0f;
     }
     
-    return 0.0f;
+    return 25.0f;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

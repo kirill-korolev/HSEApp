@@ -8,6 +8,11 @@
 
 #import "TabBarController.h"
 
+NSString* const TabBarTimeTableLiteral = @"Расписание";
+NSString* const TabBarNotificationsLiteral = @"Доска объявлений";
+NSString* const TabBarSettingsLiteral = @"Настройки";
+NSString* const TabBarOfficeLiteral = @"Контакты";
+
 @interface TabBarController ()
 
 @end
@@ -23,7 +28,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 /*

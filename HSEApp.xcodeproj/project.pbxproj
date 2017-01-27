@@ -13,7 +13,6 @@
 		ED585C521E3232AD008998D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585C511E3232AD008998D3 /* AppDelegate.m */; };
 		ED585C581E3232AD008998D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED585C561E3232AD008998D3 /* Main.storyboard */; };
 		ED585C5B1E3232AD008998D3 /* HSEApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED585C591E3232AD008998D3 /* HSEApp.xcdatamodeld */; };
-		ED585C5D1E3232AD008998D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED585C5C1E3232AD008998D3 /* Assets.xcassets */; };
 		ED585C601E3232AD008998D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED585C5E1E3232AD008998D3 /* LaunchScreen.storyboard */; };
 		ED585C971E3244BB008998D3 /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585C961E3244BB008998D3 /* AuthViewController.m */; };
 		ED585CB91E32479C008998D3 /* SF-UI-Text-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED585CA41E32479C008998D3 /* SF-UI-Text-Bold.ttf */; };
@@ -48,6 +47,13 @@
 		ED585D071E33910C008998D3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D061E33910C008998D3 /* User.m */; };
 		ED585D0A1E3391D5008998D3 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D091E3391D5008998D3 /* UserManager.m */; };
 		ED585D0D1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585D0C1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m */; };
+		EDE8CFED1E379F2C00D91CED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE8CFEC1E379F2C00D91CED /* Images.xcassets */; };
+		EDE8CFF11E37E13A00D91CED /* NotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8CFEF1E37E13A00D91CED /* NotificationCell.m */; };
+		EDE8CFF21E37E13A00D91CED /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDE8CFF01E37E13A00D91CED /* NotificationCell.xib */; };
+		EDE8CFF61E37F0D700D91CED /* CategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8CFF51E37F0D700D91CED /* CategoryButton.m */; };
+		EDE8D04E1E3B61E100D91CED /* OfficeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D04D1E3B61E100D91CED /* OfficeController.m */; };
+		EDE8D0511E3B6DBD00D91CED /* Professor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D0501E3B6DBD00D91CED /* Professor.m */; };
+		EDE8D0541E3B6ED100D91CED /* EmployeeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D0531E3B6ED100D91CED /* EmployeeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +67,6 @@
 		ED585C511E3232AD008998D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ED585C571E3232AD008998D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED585C5A1E3232AD008998D3 /* HSEApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HSEApp.xcdatamodel; sourceTree = "<group>"; };
-		ED585C5C1E3232AD008998D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED585C5F1E3232AD008998D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED585C611E3232AD008998D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED585C951E3244BB008998D3 /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
@@ -117,6 +122,18 @@
 		ED585D091E3391D5008998D3 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		ED585D0B1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+ModifiedDefaults.h"; sourceTree = "<group>"; };
 		ED585D0C1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+ModifiedDefaults.m"; sourceTree = "<group>"; };
+		EDE8CFEC1E379F2C00D91CED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		EDE8CFEE1E37E13A00D91CED /* NotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCell.h; sourceTree = "<group>"; };
+		EDE8CFEF1E37E13A00D91CED /* NotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCell.m; sourceTree = "<group>"; };
+		EDE8CFF01E37E13A00D91CED /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		EDE8CFF41E37F0D700D91CED /* CategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryButton.h; sourceTree = "<group>"; };
+		EDE8CFF51E37F0D700D91CED /* CategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryButton.m; sourceTree = "<group>"; };
+		EDE8D04C1E3B61E100D91CED /* OfficeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeController.h; sourceTree = "<group>"; };
+		EDE8D04D1E3B61E100D91CED /* OfficeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeController.m; sourceTree = "<group>"; };
+		EDE8D04F1E3B6DBD00D91CED /* Professor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Professor.h; sourceTree = "<group>"; };
+		EDE8D0501E3B6DBD00D91CED /* Professor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professor.m; sourceTree = "<group>"; };
+		EDE8D0521E3B6ED100D91CED /* EmployeeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeManager.h; sourceTree = "<group>"; };
+		EDE8D0531E3B6ED100D91CED /* EmployeeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +156,43 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		ED54889E1E37922D0042C462 /* OfficeController */ = {
+			isa = PBXGroup;
+			children = (
+				ED54889F1E3792410042C462 /* Model */,
+				ED5488A01E3792450042C462 /* View */,
+				ED5488A11E37924F0042C462 /* Controller */,
+			);
+			name = OfficeController;
+			sourceTree = "<group>";
+		};
+		ED54889F1E3792410042C462 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EDE8D04F1E3B6DBD00D91CED /* Professor.h */,
+				EDE8D0501E3B6DBD00D91CED /* Professor.m */,
+				EDE8D0521E3B6ED100D91CED /* EmployeeManager.h */,
+				EDE8D0531E3B6ED100D91CED /* EmployeeManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ED5488A01E3792450042C462 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ED5488A11E37924F0042C462 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDE8D04C1E3B61E100D91CED /* OfficeController.h */,
+				EDE8D04D1E3B61E100D91CED /* OfficeController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		ED585C411E3232AD008998D3 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +212,7 @@
 		ED585C4C1E3232AD008998D3 /* HSEApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED54889E1E37922D0042C462 /* OfficeController */,
 				ED585CD51E3270B0008998D3 /* SettingsController */,
 				ED585CD41E32709A008998D3 /* NotificationsController */,
 				ED585CD31E32708C008998D3 /* TimeTableController */,
@@ -166,8 +221,8 @@
 				ED585C911E32447D008998D3 /* Auth */,
 				ED585C991E3244E6008998D3 /* System Files */,
 				ED585C9A1E32472F008998D3 /* Fonts */,
-				ED585C5C1E3232AD008998D3 /* Assets.xcassets */,
 				ED585C4D1E3232AD008998D3 /* Supporting Files */,
+				EDE8CFEC1E379F2C00D91CED /* Images.xcassets */,
 				ED585D0B1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.h */,
 				ED585D0C1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m */,
 			);
@@ -293,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				ED585CF81E32BC42008998D3 /* Model */,
+				EDE8CFF31E37F0B800D91CED /* View */,
 				ED585CD71E3270BF008998D3 /* Controller */,
 			);
 			name = NotificationsController;
@@ -328,6 +384,9 @@
 				ED585CDD1E3270E4008998D3 /* NotificationsViewController.m */,
 				ED585D021E33316C008998D3 /* NotificationDescriptionController.h */,
 				ED585D031E33316C008998D3 /* NotificationDescriptionController.m */,
+				EDE8CFEE1E37E13A00D91CED /* NotificationCell.h */,
+				EDE8CFEF1E37E13A00D91CED /* NotificationCell.m */,
+				EDE8CFF01E37E13A00D91CED /* NotificationCell.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -376,6 +435,15 @@
 				ED585D001E32C32E008998D3 /* NotificationSection.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EDE8CFF31E37F0B800D91CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDE8CFF41E37F0D700D91CED /* CategoryButton.h */,
+				EDE8CFF51E37F0D700D91CED /* CategoryButton.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,15 +506,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED585CBF1E32479C008998D3 /* SF-UI-Text-LightItalic.ttf in Resources */,
+				EDE8CFED1E379F2C00D91CED /* Images.xcassets in Resources */,
 				ED585CC31E32479C008998D3 /* SF-UI-Text-Semibold.ttf in Resources */,
 				ED585CBD1E32479C008998D3 /* SF-UI-Text-Italic.ttf in Resources */,
 				ED585C601E3232AD008998D3 /* LaunchScreen.storyboard in Resources */,
 				ED585CC21E32479C008998D3 /* SF-UI-Text-Regular.ttf in Resources */,
 				ED585CC41E32479C008998D3 /* SF-UI-Text-SemiboldItalic.ttf in Resources */,
 				ED585CBA1E32479C008998D3 /* SF-UI-Text-BoldItalic.ttf in Resources */,
-				ED585C5D1E3232AD008998D3 /* Assets.xcassets in Resources */,
 				ED585CBE1E32479C008998D3 /* SF-UI-Text-Light.ttf in Resources */,
 				ED585CF71E32ABD3008998D3 /* TimeTableCell.xib in Resources */,
+				EDE8CFF21E37E13A00D91CED /* NotificationCell.xib in Resources */,
 				ED585CC11E32479C008998D3 /* SF-UI-Text-MediumItalic.ttf in Resources */,
 				ED585CC01E32479C008998D3 /* SF-UI-Text-Medium.ttf in Resources */,
 				ED585C581E3232AD008998D3 /* Main.storyboard in Resources */,
@@ -467,18 +536,23 @@
 				ED585CD21E326D9C008998D3 /* TabBarController.m in Sources */,
 				ED585CF61E32ABD3008998D3 /* TimeTableCell.m in Sources */,
 				ED585D011E32C32E008998D3 /* NotificationSection.m in Sources */,
+				EDE8CFF11E37E13A00D91CED /* NotificationCell.m in Sources */,
 				ED585C5B1E3232AD008998D3 /* HSEApp.xcdatamodeld in Sources */,
+				EDE8D0511E3B6DBD00D91CED /* Professor.m in Sources */,
 				ED585D0A1E3391D5008998D3 /* UserManager.m in Sources */,
 				ED585C971E3244BB008998D3 /* AuthViewController.m in Sources */,
 				ED54889D1E3681E60042C462 /* PickerViewController.m in Sources */,
+				EDE8D04E1E3B61E100D91CED /* OfficeController.m in Sources */,
 				ED585D0D1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m in Sources */,
 				ED585CE91E328927008998D3 /* Lesson.m in Sources */,
 				ED585CDB1E3270D8008998D3 /* SettingsViewController.m in Sources */,
 				ED585CFE1E32BD8A008998D3 /* NotificationManager.m in Sources */,
 				ED585D071E33910C008998D3 /* User.m in Sources */,
 				ED585CCD1E32570C008998D3 /* SignInField.m in Sources */,
+				EDE8D0541E3B6ED100D91CED /* EmployeeManager.m in Sources */,
 				ED585D041E33316C008998D3 /* NotificationDescriptionController.m in Sources */,
 				ED585C521E3232AD008998D3 /* AppDelegate.m in Sources */,
+				EDE8CFF61E37F0D700D91CED /* CategoryButton.m in Sources */,
 				ED585CEF1E328ABD008998D3 /* LessonsManager.m in Sources */,
 				ED585CE51E32865D008998D3 /* WeekSwitchButton.m in Sources */,
 				ED585C4F1E3232AD008998D3 /* main.m in Sources */,

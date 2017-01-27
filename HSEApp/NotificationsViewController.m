@@ -11,6 +11,8 @@
 #import "Notification.h"
 #import "NotificationSection.h"
 #import "NotificationDescriptionController.h"
+#import "NotificationCell.h"
+#import "TabBarController.h"
 
 @interface NotificationsViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,9 +35,12 @@
     
     manager = [[NotificationManager alloc] init];
     
-    dataTable.estimatedRowHeight = 44.f;
+    dataTable.estimatedRowHeight = 60.f;
     dataTable.rowHeight = UITableViewAutomaticDimension;
     dataTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    UINib* nib = [UINib nibWithNibName:@"NotificationCell" bundle:nil];
+    [dataTable registerNib:nib forCellReuseIdentifier:@"Cell"];
     
 }
 
@@ -46,7 +51,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.parentViewController.navigationItem.title = @"Доска объявлений";
+    self.parentViewController.navigationItem.title = TabBarNotificationsLiteral;
 }
 
 
@@ -62,9 +67,9 @@
     
     UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(15,0,dataTable.bounds.size.width,30.f)];
     headerLabel.textColor = [UIColor blackColor];
-    NotificationSection* NSSection = [manager.notifications objectAtIndex:section];
+    NotificationSection* notificationSection = [manager.notifications objectAtIndex:section];
     
-    headerLabel.text = [NSString stringWithFormat:@"%@",  NSSection.date];
+    headerLabel.text = [NSString stringWithFormat:@"%@", notificationSection.date];
     headerLabel.font = [UIFont fontWithName:@"SFUIText-Regular" size:12.f];
     
     [headerView addSubview:headerLabel];
@@ -84,34 +89,53 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     return [[[manager.notifications objectAtIndex:section] notifications] count];
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView* footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, dataTable.bounds.size.width, 5.f)];
+    
+    UIView* line = [[UIView alloc] initWithFrame:CGRectZero];
+    line.backgroundColor = [UIColor colorWithRed:230/255.f green:230/255.f  blue:230/255.f  alpha:1.f];
+    line.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSLayoutConstraint* widthConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:line attribute:NSLayoutAttributeWidth multiplier:1.f constant:0.0];
+ 
+    NSLayoutConstraint* heightConstraint = [NSLayoutConstraint constraintWithItem:line attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:NSConstantValueExpressionType attribute:NSLayoutAttributeHeight multiplier:1.f constant:1.f];
+    
+    [footerView addConstraint:widthConstraint];
+    [line addConstraint:heightConstraint];
+    
+    [footerView addSubview:line];
+    footerView.backgroundColor = nil;
+    
+    return footerView;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 25.f;
 }
 
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [dataTable dequeueReusableCellWithIdentifier:@"Cell"];
-    
-    NSIndexPath* path = [dataTable indexPathForCell:cell];
-    NSInteger sectionNumber = path.section;
+    NotificationCell* cell = [dataTable dequeueReusableCellWithIdentifier:@"Cell"];
     
     cell.preservesSuperviewLayoutMargins = false;
     cell.separatorInset = UIEdgeInsetsZero;
     cell.layoutMargins = UIEdgeInsetsZero;
     
-    Notification* currentNotification = [[[manager.notifications objectAtIndex:sectionNumber] notifications] objectAtIndex:indexPath.row];
+    Notification* currentNotification = [[[manager.notifications objectAtIndex:indexPath.section] notifications] objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = currentNotification.title;
-    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    cell.textLabel.numberOfLines = 0;
-    [cell.textLabel sizeToFit];
+    cell.titleLabel.text = currentNotification.title;
     
     UIView* customView = [[UIView alloc] init];
     customView.backgroundColor = [UIColor colorWithRed:230/255.f green:230/255.f  blue:230/255.f alpha:1.f];
-    
-    
     cell.selectedBackgroundView = customView;
-    
     [cell sizeToFit];
     
     return cell;
@@ -126,14 +150,17 @@
 {
     NotificationDescriptionController* destinationController = [segue destinationViewController];
     
-    UITableViewCell* tempCell = (UITableViewCell*)sender;
-    NSIndexPath* path = [dataTable indexPathForCell:tempCell];
+    NSIndexPath* path = [dataTable indexPathForSelectedRow];
     NSInteger sectionIndex = path.section;
     NSInteger cellIndex = [[dataTable indexPathForSelectedRow] row];
-    destinationController.descriptionText = [[[[manager.notifications objectAtIndex:sectionIndex] notifications] objectAtIndex:cellIndex] title];
-    destinationController.subDescriptionText = [[[[manager.notifications objectAtIndex:sectionIndex] notifications] objectAtIndex:cellIndex] descriptionText];
+    
+    NotificationSection* section = [manager.notifications objectAtIndex:sectionIndex];
+    Notification* notification = [section.notifications objectAtIndex:cellIndex];
+    
+    destinationController.descriptionText = notification.title;
+    destinationController.subDescriptionText = notification.descriptionText;
+    destinationController.date = section.date;
 }
-
 
 /*
 #pragma mark - Navigation

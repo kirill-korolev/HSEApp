@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Notification.h"
 
 @interface NotificationDescriptionController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel* descriptionLabel;
 @property (strong, nonatomic) NSString* descriptionText;
-@property (weak, nonatomic) IBOutlet UILabel *subDescriptionLabel;
 @property (strong, nonatomic) NSString* subDescriptionText;
+@property (assign, nonatomic) NSString* date;
 @end

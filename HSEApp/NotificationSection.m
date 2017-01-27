@@ -19,7 +19,7 @@
     
     if(self)
     {
-        notifications = [NSArray arrayWithArray:latestNotifications];
+        self.notifications = [NSArray arrayWithArray:latestNotifications];
         self.date = currentDate;
     }
     

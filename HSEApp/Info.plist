@@ -43,6 +43,8 @@
 		<string>SF-UI-Text-Thin.ttf</string>
 		<string>SF-UI-Text-Semibold.ttf</string>
 	</array>
+	<key></key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

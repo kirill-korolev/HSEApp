@@ -7,9 +7,11 @@
 //
 
 #import "NotificationDescriptionController.h"
+#import "CategoryButton.h"
 
 @interface NotificationDescriptionController ()
-
+@property (weak, nonatomic) IBOutlet UILabel* descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subDescriptionLabel;
 @end
 
 @implementation NotificationDescriptionController
@@ -18,23 +20,21 @@
 @synthesize descriptionText;
 @synthesize subDescriptionText;
 @synthesize subDescriptionLabel;
+@synthesize date;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [descriptionLabel setText:descriptionText];
-    descriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    descriptionLabel.numberOfLines = 0;
-    [descriptionLabel sizeToFit];
-
-    [subDescriptionLabel setText:descriptionText];
-    subDescriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    subDescriptionLabel.numberOfLines = 0;
-    [subDescriptionLabel sizeToFit];
+    NSArray* labels = @[descriptionLabel, subDescriptionLabel];
     
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    for(UILabel* label in labels)
+    {
+        label.lineBreakMode = NSLineBreakByWordWrapping;
+        label.numberOfLines = 0;
+        [label sizeToFit];
+    }
     
+    [self didRecieveDataFromCell];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,6 +42,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)didRecieveDataFromCell
+{
+    [descriptionLabel setText:descriptionText];
+    [subDescriptionLabel setText:subDescriptionText];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+}
 
 /*
 #pragma mark - Navigation
