@@ -10,4 +10,9 @@
 
 @interface EmployeeManager : NSObject
 
+@property (strong, nonatomic) NSArray* office;
+@property (strong, nonatomic) NSArray* professors;
+
+-(id)sharedManager;
+
 @end

@@ -52,9 +52,11 @@
             User* tempUser = [manager getUserByMail:tempMail];
             
             [[NSUserDefaults standardUserDefaults] saveCustomObject:tempUser key:@"user"];
-            [self performSegueWithIdentifier:@"authSegue" sender:self];
+            //[self performSegueWithIdentifier:@"authSegue" sender:self];
         }
     }
+    
+    [self performSegueWithIdentifier:@"authSegue" sender:self];
 }
 
 - (IBAction)signInTroubleShoot:(id)sender {

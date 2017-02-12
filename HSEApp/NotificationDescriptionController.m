@@ -47,6 +47,7 @@
     [descriptionLabel setText:descriptionText];
     [subDescriptionLabel setText:subDescriptionText];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationItem.title = self.date;
 }
 
 /*

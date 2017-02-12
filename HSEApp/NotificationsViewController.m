@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) NotificationManager* manager;
 @property (weak, nonatomic) IBOutlet UITableView* dataTable;
+@property (strong, nonatomic) UIBarButtonItem* categoryPicker;
 
 @end
 
@@ -25,6 +26,7 @@
 
 @synthesize dataTable;
 @synthesize manager;
+@synthesize categoryPicker;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +43,11 @@
     
     UINib* nib = [UINib nibWithNibName:@"NotificationCell" bundle:nil];
     [dataTable registerNib:nib forCellReuseIdentifier:@"Cell"];
+ 
+    
+    UIImage* categoryPickerImage = [UIImage imageNamed:@"notifications.png"];
+    categoryPicker = [[UIBarButtonItem alloc] initWithImage:categoryPickerImage style:UIBarButtonItemStyleDone target:self action:@selector(didTouchBarButtonItem:)];
+    categoryPicker.tintColor = [UIColor whiteColor];
     
 }
 
@@ -49,11 +56,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)didTouchBarButtonItem:(id) sender
+{
+    [self performSegueWithIdentifier:@"categoryPickSegue" sender:self];
+}
+
+
 -(void)viewWillAppear:(BOOL)animated
 {
     self.parentViewController.navigationItem.title = TabBarNotificationsLiteral;
+    self.parentViewController.navigationItem.rightBarButtonItem = categoryPicker;
 }
-
 
 #pragma mark - UITableViewDelegate
 
@@ -148,18 +161,25 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NotificationDescriptionController* destinationController = [segue destinationViewController];
-    
-    NSIndexPath* path = [dataTable indexPathForSelectedRow];
-    NSInteger sectionIndex = path.section;
-    NSInteger cellIndex = [[dataTable indexPathForSelectedRow] row];
-    
-    NotificationSection* section = [manager.notifications objectAtIndex:sectionIndex];
-    Notification* notification = [section.notifications objectAtIndex:cellIndex];
-    
-    destinationController.descriptionText = notification.title;
-    destinationController.subDescriptionText = notification.descriptionText;
-    destinationController.date = section.date;
+    if([segue.identifier isEqualToString:@"categoryPickSegue"])
+    {
+        
+    }
+    else
+    {
+        NotificationDescriptionController* destinationController = [segue destinationViewController];
+        
+        NSIndexPath* path = [dataTable indexPathForSelectedRow];
+        NSInteger sectionIndex = path.section;
+        NSInteger cellIndex = [[dataTable indexPathForSelectedRow] row];
+        
+        NotificationSection* section = [manager.notifications objectAtIndex:sectionIndex];
+        Notification* notification = [section.notifications objectAtIndex:cellIndex];
+        
+        destinationController.descriptionText = notification.title;
+        destinationController.subDescriptionText = notification.descriptionText;
+        destinationController.date = section.date;
+    }
 }
 
 /*

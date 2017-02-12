@@ -17,7 +17,7 @@
 {
     if(self = [super init])
     {
-        self.fullname = fullname;
+        self.fullname = name;
         self.post = position;
     }
     

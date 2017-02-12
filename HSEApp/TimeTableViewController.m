@@ -15,6 +15,9 @@
 #import "WeekSwitchButton.h"
 #import "TabBarController.h"
 
+#define STANDARD_MARGIN 25
+#define FOOTER_HEIGHT 46
+
 @interface TimeTableViewController () <UITableViewDelegate, UITableViewDataSource>
 {
     NSArray* daysOfWeek;
@@ -60,16 +63,13 @@
     datePicker = [[UIBarButtonItem alloc] initWithImage:datePickerImage style:UIBarButtonItemStyleDone target:self action:@selector(didTouchBarButtonItem:)];
     datePicker.tintColor = [UIColor whiteColor];
     
+    dataTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    self.parentViewController.navigationItem.rightBarButtonItem = nil;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -127,7 +127,6 @@
         _nextButton.enabled = NO;
     }
     
-    
 }
 
 #pragma mark - UITableViewDelegate
@@ -176,48 +175,53 @@
     return 30.f;
 }
 
+
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     Week* week = [manager.data objectAtIndex:numberOfWeek];
     Day* day = [week.days objectForKey:[daysOfWeek objectAtIndex:section]];
  
     UIView* footerView = [[UIView alloc] init];
-
-    UIView* line = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, footerView.bounds.size.width, 1.f)];
+    footerView.backgroundColor = nil;
+    
+    UIView* line = [[UIView alloc] initWithFrame:CGRectMake(0.0, 1.0, footerView.bounds.size.width, 1.f)];
     line.translatesAutoresizingMaskIntoConstraints = NO;
-    line.backgroundColor = [UIColor colorWithRed:230/255.f green:230/255.f  blue:230/255.f  alpha:1.f];
+    line.backgroundColor = [UIColor colorWithRed:220/255.f green:220/255.f  blue:220/255.f  alpha:1.f];
     
     NSLayoutConstraint* lineWidthConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:line attribute:NSLayoutAttributeWidth multiplier:1.f constant:0.0];
-    NSLayoutConstraint* lineBottomConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:line attribute:NSLayoutAttributeTop multiplier:1.f constant:0.0];
+    NSLayoutConstraint* lineBottomConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:line attribute:NSLayoutAttributeBottom multiplier:1.f constant:0.0];
     NSLayoutConstraint* lineHeightConstraint = [NSLayoutConstraint constraintWithItem:line attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:NSConstantValueExpressionType attribute:NSLayoutAttributeHeight multiplier:1.f constant:1.f];
     
     [footerView addConstraint:lineWidthConstraint];
     [footerView addConstraint:lineBottomConstraint];
     [line addConstraint:lineHeightConstraint];
+    
     [footerView addSubview:line];
     
     if(day.lessons.count == 0)
     {
-        footerView.frame = dataTable.bounds;
-        [footerView setBackgroundColor:[UIColor colorWithRed:238/255.f green:238/255.f blue:238/255.f alpha:1.f]];
+        UIView* rectView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, dataTable.bounds.size.width, FOOTER_HEIGHT)];
         
-        UILabel* footerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, footerView.bounds.size.width, 51.f)];
+        [rectView setBackgroundColor:[UIColor colorWithRed:228/255.f green:228/255.f blue:228/255.f alpha:1.f]];
+        
+        UILabel* footerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         [footerLabel setText:@"Нет занятий"];
         footerLabel.translatesAutoresizingMaskIntoConstraints = NO;
         footerLabel.font = [UIFont fontWithName:@"SFUIText-Regular" size:14.f];
         footerLabel.textAlignment = NSTextAlignmentCenter;
         [footerLabel setTextColor:[UIColor colorWithRed:128/255.f green:128/255.f blue:128/255.f alpha:1.f]];
-
+        
         NSLayoutConstraint* labelWidthConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:footerLabel attribute:NSLayoutAttributeWidth multiplier:1.f constant:0.0];
         
          NSLayoutConstraint* labelCenterXConstraint = [NSLayoutConstraint constraintWithItem:footerView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:footerLabel attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0.0];
         
-        NSLayoutConstraint* labelHeightConstraint = [NSLayoutConstraint constraintWithItem:footerLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:NSConstantValueExpressionType attribute:NSLayoutAttributeHeight multiplier:1.f constant:51.f];
+         NSLayoutConstraint* labelHeightConstraint = [NSLayoutConstraint constraintWithItem:footerLabel attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem: NSConstantValueExpressionType attribute:NSLayoutAttributeHeight multiplier:1.f constant:FOOTER_HEIGHT];
         
-        [footerView addConstraint:labelWidthConstraint];
-        [footerView addConstraint:labelCenterXConstraint];
+        [footerView addConstraints:@[labelWidthConstraint, labelCenterXConstraint]];
         [footerLabel addConstraint:labelHeightConstraint];
-        [footerView addSubview:footerLabel];
+        
+        [rectView addSubview:footerLabel];
+        [footerView addSubview:rectView];
     }
     
     return footerView;
@@ -228,12 +232,32 @@
     Week* week = [manager.data objectAtIndex:numberOfWeek];
     Day* day = [week.days objectForKey:[daysOfWeek objectAtIndex:section]];
     
-    if(day.lessons.count == 0)
+    CGFloat height;
+    
+    if((section+1) < [self numberOfSectionsInTableView:tableView])
     {
-        return 51.0f;
+        if(day.lessons.count == 0)
+        {
+            height = FOOTER_HEIGHT + STANDARD_MARGIN;
+        }
+        else
+        {
+            height = STANDARD_MARGIN;
+        }
+    }
+    else
+    {
+        if(day.lessons.count == 0)
+        {
+            height = FOOTER_HEIGHT;
+        }
+        else
+        {
+            height = 0.0;
+        }
     }
     
-    return 25.0f;
+    return height;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -245,8 +269,6 @@
     Week* currentWeek = [manager.data objectAtIndex:numberOfWeek];
     Day* currentDay = [currentWeek.days valueForKey:[daysOfWeek objectAtIndex:sectionNumber]];
     Lesson* currentLesson = [currentDay.lessons objectAtIndex:indexPath.row];
-    
-    
     
     cell.startingTimeLabel.text = currentLesson.startingTime;
     cell.finishingTimeLabel.text = currentLesson.startingTime;
@@ -277,17 +299,5 @@
     
     return cell;
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

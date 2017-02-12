@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2973C81E43B039000C6E39 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ED2973C71E43B039000C6E39 /* Podfile */; };
 		ED5488971E3402100042C462 /* SettingsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5488961E3402100042C462 /* SettingsButton.m */; };
 		ED54889D1E3681E60042C462 /* PickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED54889C1E3681E60042C462 /* PickerViewController.m */; };
 		ED585C4F1E3232AD008998D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED585C4E1E3232AD008998D3 /* main.m */; };
@@ -54,9 +55,16 @@
 		EDE8D04E1E3B61E100D91CED /* OfficeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D04D1E3B61E100D91CED /* OfficeController.m */; };
 		EDE8D0511E3B6DBD00D91CED /* Professor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D0501E3B6DBD00D91CED /* Professor.m */; };
 		EDE8D0541E3B6ED100D91CED /* EmployeeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D0531E3B6ED100D91CED /* EmployeeManager.m */; };
+		EDE8D0571E3C8F2100D91CED /* OfficeDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D0561E3C8F2100D91CED /* OfficeDetailsController.m */; };
+		EDE8D05A1E3C90DC00D91CED /* NotificationCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D0591E3C90DC00D91CED /* NotificationCategoryController.m */; };
+		EDE8D05D1E3D06D200D91CED /* OfficeStaffCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE8D05C1E3D06D200D91CED /* OfficeStaffCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43850F88211AF47F7DCEEA75 /* Pods-HSEApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSEApp/Pods-HSEApp.debug.xcconfig"; sourceTree = "<group>"; };
+		651A9DF3F0522A7CA1560FC9 /* libPods-HSEApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HSEApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4ABCEC80F58838CAC97999E /* Pods-HSEApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSEApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSEApp/Pods-HSEApp.release.xcconfig"; sourceTree = "<group>"; };
+		ED2973C71E43B039000C6E39 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED5488951E3402100042C462 /* SettingsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsButton.h; sourceTree = "<group>"; };
 		ED5488961E3402100042C462 /* SettingsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsButton.m; sourceTree = "<group>"; };
 		ED54889B1E3681E60042C462 /* PickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerViewController.h; sourceTree = "<group>"; };
@@ -134,6 +142,12 @@
 		EDE8D0501E3B6DBD00D91CED /* Professor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professor.m; sourceTree = "<group>"; };
 		EDE8D0521E3B6ED100D91CED /* EmployeeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeManager.h; sourceTree = "<group>"; };
 		EDE8D0531E3B6ED100D91CED /* EmployeeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeManager.m; sourceTree = "<group>"; };
+		EDE8D0551E3C8F2100D91CED /* OfficeDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeDetailsController.h; sourceTree = "<group>"; };
+		EDE8D0561E3C8F2100D91CED /* OfficeDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeDetailsController.m; sourceTree = "<group>"; };
+		EDE8D0581E3C90DC00D91CED /* NotificationCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCategoryController.h; sourceTree = "<group>"; };
+		EDE8D0591E3C90DC00D91CED /* NotificationCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCategoryController.m; sourceTree = "<group>"; };
+		EDE8D05B1E3D06D200D91CED /* OfficeStaffCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeStaffCell.h; sourceTree = "<group>"; };
+		EDE8D05C1E3D06D200D91CED /* OfficeStaffCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeStaffCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +161,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44680CC509D231FD3FED0B70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				651A9DF3F0522A7CA1560FC9 /* libPods-HSEApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55AD41502729AF00174C68E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43850F88211AF47F7DCEEA75 /* Pods-HSEApp.debug.xcconfig */,
+				D4ABCEC80F58838CAC97999E /* Pods-HSEApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED5488941E3401F60042C462 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +220,10 @@
 			children = (
 				EDE8D04C1E3B61E100D91CED /* OfficeController.h */,
 				EDE8D04D1E3B61E100D91CED /* OfficeController.m */,
+				EDE8D0551E3C8F2100D91CED /* OfficeDetailsController.h */,
+				EDE8D0561E3C8F2100D91CED /* OfficeDetailsController.m */,
+				EDE8D05B1E3D06D200D91CED /* OfficeStaffCell.h */,
+				EDE8D05C1E3D06D200D91CED /* OfficeStaffCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -198,6 +233,8 @@
 			children = (
 				ED585C4C1E3232AD008998D3 /* HSEApp */,
 				ED585C4B1E3232AD008998D3 /* Products */,
+				55AD41502729AF00174C68E5 /* Pods */,
+				44680CC509D231FD3FED0B70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +249,7 @@
 		ED585C4C1E3232AD008998D3 /* HSEApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED2973C71E43B039000C6E39 /* Podfile */,
 				ED54889E1E37922D0042C462 /* OfficeController */,
 				ED585CD51E3270B0008998D3 /* SettingsController */,
 				ED585CD41E32709A008998D3 /* NotificationsController */,
@@ -387,6 +425,8 @@
 				EDE8CFEE1E37E13A00D91CED /* NotificationCell.h */,
 				EDE8CFEF1E37E13A00D91CED /* NotificationCell.m */,
 				EDE8CFF01E37E13A00D91CED /* NotificationCell.xib */,
+				EDE8D0581E3C90DC00D91CED /* NotificationCategoryController.h */,
+				EDE8D0591E3C90DC00D91CED /* NotificationCategoryController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -453,9 +493,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED585C641E3232AD008998D3 /* Build configuration list for PBXNativeTarget "HSEApp" */;
 			buildPhases = (
+				714DDE778F3EDA5F14C3BF31 /* [CP] Check Pods Manifest.lock */,
 				ED585C461E3232AD008998D3 /* Sources */,
 				ED585C471E3232AD008998D3 /* Frameworks */,
 				ED585C481E3232AD008998D3 /* Resources */,
+				5572434BD515072FDEA50615 /* [CP] Embed Pods Frameworks */,
+				969D5D5624811A68EF83C7AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -511,6 +554,7 @@
 				ED585CBD1E32479C008998D3 /* SF-UI-Text-Italic.ttf in Resources */,
 				ED585C601E3232AD008998D3 /* LaunchScreen.storyboard in Resources */,
 				ED585CC21E32479C008998D3 /* SF-UI-Text-Regular.ttf in Resources */,
+				ED2973C81E43B039000C6E39 /* Podfile in Resources */,
 				ED585CC41E32479C008998D3 /* SF-UI-Text-SemiboldItalic.ttf in Resources */,
 				ED585CBA1E32479C008998D3 /* SF-UI-Text-BoldItalic.ttf in Resources */,
 				ED585CBE1E32479C008998D3 /* SF-UI-Text-Light.ttf in Resources */,
@@ -527,6 +571,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5572434BD515072FDEA50615 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSEApp/Pods-HSEApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		714DDE778F3EDA5F14C3BF31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		969D5D5624811A68EF83C7AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSEApp/Pods-HSEApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED585C461E3232AD008998D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -540,7 +632,9 @@
 				ED585C5B1E3232AD008998D3 /* HSEApp.xcdatamodeld in Sources */,
 				EDE8D0511E3B6DBD00D91CED /* Professor.m in Sources */,
 				ED585D0A1E3391D5008998D3 /* UserManager.m in Sources */,
+				EDE8D05A1E3C90DC00D91CED /* NotificationCategoryController.m in Sources */,
 				ED585C971E3244BB008998D3 /* AuthViewController.m in Sources */,
+				EDE8D05D1E3D06D200D91CED /* OfficeStaffCell.m in Sources */,
 				ED54889D1E3681E60042C462 /* PickerViewController.m in Sources */,
 				EDE8D04E1E3B61E100D91CED /* OfficeController.m in Sources */,
 				ED585D0D1E33B1CD008998D3 /* NSUserDefaults+ModifiedDefaults.m in Sources */,
@@ -558,6 +652,7 @@
 				ED585C4F1E3232AD008998D3 /* main.m in Sources */,
 				ED585CFB1E32BC59008998D3 /* Notification.m in Sources */,
 				ED585CF21E328FA1008998D3 /* Week.m in Sources */,
+				EDE8D0571E3C8F2100D91CED /* OfficeDetailsController.m in Sources */,
 				ED585CC71E325011008998D3 /* SignInButton.m in Sources */,
 				ED585CE11E3270F0008998D3 /* TimeTableViewController.m in Sources */,
 				ED585CEC1E328A6D008998D3 /* Day.m in Sources */,
@@ -679,6 +774,7 @@
 		};
 		ED585C651E3232AD008998D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43850F88211AF47F7DCEEA75 /* Pods-HSEApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AW37662HE7;
@@ -692,6 +788,7 @@
 		};
 		ED585C661E3232AD008998D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4ABCEC80F58838CAC97999E /* Pods-HSEApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AW37662HE7;

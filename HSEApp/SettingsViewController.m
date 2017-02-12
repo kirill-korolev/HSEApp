@@ -41,6 +41,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.parentViewController.navigationItem.rightBarButtonItem = nil;
     self.parentViewController.navigationItem.title = TabBarSettingsLiteral;
 }
 - (IBAction)didTouchExitButton:(id)sender {

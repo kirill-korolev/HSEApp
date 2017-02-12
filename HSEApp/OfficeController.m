@@ -10,11 +10,9 @@
 #import "EmployeeManager.h"
 #import "Professor.h"
 #import "TabBarController.h"
+#import "OfficeStaffCell.h"
 
 @interface OfficeController () <UITableViewDelegate, UITableViewDataSource>
-{
-    NSInteger activeSegment;
-}
 
 @property (strong, nonatomic) UISegmentedControl* segmentedControl;
 @property (weak, nonatomic) IBOutlet UITableView *dataTable;
@@ -34,18 +32,28 @@
     dataTable.delegate = self;
     dataTable.dataSource = self;
     
-    activeSegment = 0;
-    
     manager = [[EmployeeManager alloc] init];
     
     segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Учебный офис",@"Преподаватели"]];
     [self handleSegmentedControl];
-    segmentedControl.selectedSegmentIndex = activeSegment;
+    segmentedControl.selectedSegmentIndex = 0;
+    [segmentedControl addTarget:self action:@selector(didChangeSegment:) forControlEvents:UIControlEventValueChanged];
+    
+    dataTable.estimatedRowHeight = segmentedControl.selectedSegmentIndex ? 45.f : 65.f;
+    dataTable.rowHeight = UITableViewAutomaticDimension;
+    
+    dataTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)didChangeSegment:(id)sender
+{
+    [dataTable reloadData];
+    dataTable.rowHeight = segmentedControl.selectedSegmentIndex ? 45.f : 65.f;
 }
 
 -(void)handleSegmentedControl
@@ -56,6 +64,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.parentViewController.navigationItem.rightBarButtonItem = nil;
     self.parentViewController.navigationItem.titleView = segmentedControl;
 }
 
@@ -68,23 +77,37 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return segmentedControl.selectedSegmentIndex ? manager.professors.count : manager.office.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[UITableViewCell alloc] init];
+    OfficeStaffCell* cell = [dataTable dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    cell.fullnameLabel.text = segmentedControl.selectedSegmentIndex ? [[manager.professors objectAtIndex:indexPath.row] fullname] : [[manager.office objectAtIndex:indexPath.row] fullname];
+    
+    cell.postLabel.text = segmentedControl.selectedSegmentIndex ? [[manager.professors objectAtIndex:indexPath.row] post] : [[manager.office objectAtIndex:indexPath.row] post];
+    
+    cell.separatorInset = UIEdgeInsetsZero;
+    cell.layoutMargins = UIEdgeInsetsZero;
+    
+    
+    [cell sizeToFit];
+    
+    return cell;
 }
 
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"contactDetailsSegue" sender:self];
 }
-*/
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+}
+
 
 @end
